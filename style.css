@@ -1,0 +1,18 @@
+
+.seccionDeEntrada, .seccionDeSalida{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    /* cada card se dividen entre el 90% del espacio */
+    vertical-align: top;
+    /* Alinea las cards, arriba */
+    margin: 0 1.5%;
+    /* margen laterales de 1.5% para espaciar las cards */
+    padding: 30px 20px;
+    /* para ajustar el tamaño de la card */
+    box-sizing: border-box;
+    /* para que el padding no sobrepase el width */
+    border: black 3px dashed;
+    /* color/width/style */
+    border-radius: 20px;
+}
