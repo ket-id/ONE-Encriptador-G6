@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>ONE-Encriptador-G6</title>
-         <link rel="stylesheet" href="reset.css">
-         <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE-Encriptador-G6</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <article class="caja">
+<body>
 
-            <header class="webLogo">
-                <img src="img/Logo.png" alt="logotipo del encriptador de texto">
-            </header>
-    
-            <section class="seccionDeEntrada">
-                <textarea id="entradaDeTexto" placeholder="Ingrese el texto aquí."></textarea>
-    
-                <footer>
-                    <p>
-                        <img src="img/Exclamacion.png" alt="">Solo letras minúsculas y sin acentos.
-                    </p>
-                    <div class="buttons-box">
-                        <button class="encrypt_button" onclick="encriptarTexto()">Encriptar</button>
-                        <button class="decrypt_button" onclick="desencriptarTexto()">Desencriptar</button>
-                    </div>
-                </footer>
-            </section>
-    
-            <section class="seccionDeSalida">
-    
-                <div  class="salidaDeTextoCaja">
-                    <textarea  class="salidaDeTexto" cols="15" rows="5" readonly></textarea>
-                    <button id="botonDeCopiarTexto" onclick="copiarTexto()">Copiar</button>
-                </div>
-    
-                <div class="ImagenSalidaDeTexto">
-                    <img class="imageInputVacio" src="img/Muñeco.png" alt="imagen de mensaje no encontrado">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
-            </section>
-    
-        </article>
-    </body>
-    <script src="app.js"></script>
+
+    <header class="webLogo">
+        <img src="img/Logo.png" alt="logotipo del encriptador de texto">
+    </header>
+
+    <section class="seccionDeEntrada">
+        <textarea id="entradaDeTexto" placeholder="Ingrese el texto aquí."></textarea>
+
+        <div class="botoneraEntrada">
+            <p>
+                <img class="importantIcon" src="img/Exclamacion.png" alt="Importante">  Solo letras minúsculas y sin acentos.
+            </p>
+            <div class="cajaDeBotones">
+                <button class="encrypt_button" onclick="encriptarTexto()">Encriptar</button>
+                <button class="decrypt_button" onclick="desencriptarTexto()">Desencriptar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccionDeSalida">
+
+        <!-- <div class="salidaDeTextoCaja">
+            <textarea class="salidaDeTexto" cols="15" rows="5" readonly></textarea>
+            <button id="botonDeCopiarTexto" onclick="copiarTexto()">Copiar</button>
+        </div> -->
+
+        <div class="ImagenSalidaDeTexto">
+            <img class="imageInputVacio" src="img/Muñeco.png" alt="imagen de mensaje no encontrado">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+    </section>
+
+
+</body>
+<script src="app.js"></script>
 
 </html>

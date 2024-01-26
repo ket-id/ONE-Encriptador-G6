@@ -1,18 +1,101 @@
+body {
+    background-color: #f3f5fc;
+    display: flex;
+}
 
-.seccionDeEntrada, .seccionDeSalida{
-    display: inline-block;
+.webLogo {
+    position: relative;
+    left: 40px;
+    top: 40px;
+    width: 31.09px;
+    height: 48px;
+}
+
+.seccionDeEntrada,
+.seccionDeSalida {
     text-align: center;
-    width: 30%;
-    /* cada card se dividen entre el 90% del espacio */
-    vertical-align: top;
-    /* Alinea las cards, arriba */
-    margin: 0 1.5%;
-    /* margen laterales de 1.5% para espaciar las cards */
+    margin: 100px 0 50px 50px;
     padding: 30px 20px;
-    /* para ajustar el tamaño de la card */
     box-sizing: border-box;
-    /* para que el padding no sobrepase el width */
-    border: black 3px dashed;
-    /* color/width/style */
-    border-radius: 20px;
+
+
+}
+
+#entradaDeTexto::-webkit-input-placeholder {
+    color: #0A3871;
+}
+
+
+#entradaDeTexto {
+    flex-basis: 100%;
+    font-size: 32px;
+    background-color: transparent;
+    color: #0A3871;
+    border: none;
+    resize: none;
+}
+
+.seccionDeEntrada {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+}
+.botoneraEntrada{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.botoneraEntrada p {
+    color: #495057;
+    font-size: 12px;
+
+}
+
+.importantIcon {
+    width: 16px;
+    height: 16px;
+}
+.cajaDeBotones{
+    text-align: center;
+    margin-top: 24px;
+    width: 680px;
+    height: 67px;
+}
+
+.encrypt_button{
+    margin-right: 12px;
+    background-color: #0A3871;
+    color: #FFF;
+    border: none;
+    padding: 24px;
+    border-radius: 24px;
+    width: 300px;
+}
+.decrypt_button{
+    margin-right: 12px;
+    background-color: #d8dfe8;
+    color: #0a3871;
+    border: none;
+    padding: 24px;
+    border-radius: 24px;
+    width: 300px;
+    border: 1px #0A3871 solid;
+
+}
+
+
+.seccionDeSalida {
+    margin-top: 40px;
+    margin-right: 40px;
+    height: 600px;
+    background-color: #ffffff;
+    width: 30%;
+}
+
+.imageInputVacio {
+    width: 100%;
+
 }
