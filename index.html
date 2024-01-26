@@ -12,41 +12,42 @@
 <body>
     <section class="cuerpoDePagina">
 
-    <header class="webLogo">
-        <img src="img/Logo.png" alt="logotipo del encriptador de texto">
-    </header>
+        <header class="webLogo">
+            <img src="img/Logo.png" alt="logotipo del encriptador de texto">
+        </header>
 
-    <section class="seccionDeEntrada">
-        <textarea id="entradaDeTexto" placeholder="Ingrese el texto aquí."></textarea>
+        <section class="seccionDeEntrada">
+            <textarea id="entradaDeTexto" placeholder="Ingrese el texto aquí."></textarea>
 
-        <div class="botoneraEntrada">
-            <p>
-                <img class="importantIcon" src="img/Exclamacion.png" alt="Importante">  Solo letras minúsculas y sin acentos.
-            </p>
-            <div class="cajaDeBotones">
-                <button class="encrypt_button" onclick="encriptarTexto()">Encriptar</button>
-                <button class="decrypt_button" onclick="desencriptarTexto()">Desencriptar</button>
+            <div class="botoneraEntrada">
+                <p>
+                    <img class="importantIcon" src="img/Exclamacion.png" alt="Importante"> Solo letras minúsculas y sin
+                    acentos.
+                </p>
+                <div class="cajaDeBotones">
+                    <button class="encrypt_button" onclick="encriptarTexto()">Encriptar</button>
+                    <button class="decrypt_button" onclick="desencriptarTexto()">Desencriptar</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="seccionDeSalida">
+        <section class="seccionDeSalida">
 
-        <!-- <div class="salidaDeTextoCaja">
-            <textarea class="salidaDeTexto" cols="15" rows="5" readonly></textarea>
-            <button id="botonDeCopiarTexto" onclick="copiarTexto()">Copiar</button>
-        </div> -->
-
-        <div class="ImagenSalidaDeTexto">
+            <!-- <div class="ImagenSalidaDeTexto">
             <img class="imageInputVacio" src="img/Muñeco.png" alt="imagen de mensaje no encontrado">
             <h2>Ningún mensaje fue encontrado</h2>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
+        </div> -->
+
+            <div class="salidaDeTextoCaja">
+                <textarea class="salidaDeTexto"  readonly>lalala</textarea>
+                <button class="botonDeCopiarTexto" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </section>
     </section>
-</section>
-<footer>
-    <p>Maximiliano Giacobini - 2024 | Grupo 6 de ONE</p>
-</footer>
+    <footer>
+        <p>Maximiliano Giacobini - 2024 | Grupo 6 de ONE</p>
+    </footer>
 
 </body>
 <script src="app.js"></script>
