@@ -1,4 +1,4 @@
-body {
+.cuerpoDePagina {
     background-color: #f3f5fc;
     display: flex;
 }
@@ -42,7 +42,8 @@ body {
     width: 60%;
 
 }
-.botoneraEntrada{
+
+.botoneraEntrada {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -58,14 +59,15 @@ body {
     width: 16px;
     height: 16px;
 }
-.cajaDeBotones{
+
+.cajaDeBotones {
     text-align: center;
     margin-top: 24px;
     width: 680px;
     height: 67px;
 }
 
-.encrypt_button{
+.encrypt_button {
     margin-right: 12px;
     background-color: #0A3871;
     color: #FFF;
@@ -74,7 +76,8 @@ body {
     border-radius: 24px;
     width: 300px;
 }
-.decrypt_button{
+
+.decrypt_button {
     margin-right: 12px;
     background-color: #d8dfe8;
     color: #0a3871;
@@ -90,12 +93,29 @@ body {
 .seccionDeSalida {
     margin-top: 40px;
     margin-right: 40px;
-    height: 600px;
+    height: 550px;
     background-color: #ffffff;
     width: 30%;
+    border-radius: 32px;
 }
 
 .imageInputVacio {
     width: 100%;
 
+}
+
+.ImagenSalidaDeTexto h2{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px;
+}
+.ImagenSalidaDeTexto p{
+    font-size: 16px;
+    color: #495057;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #f3f5fc;
 }
