@@ -7,6 +7,7 @@
   body {
     font-family: 'OpenDyslexic', sans-serif;
   }
+  /* label */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -152,6 +153,7 @@
 
 .salidaDeTexto {
     font-size: 32px;
+    font-family: 'OpenDyslexic', sans-serif;
     color: #495057;
     background-color: transparent;
     border: none;
