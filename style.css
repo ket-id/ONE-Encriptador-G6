@@ -1,3 +1,13 @@
+/* Fuente apta para personas con dislexia */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('Fonts/OpenDyslexicAlta-Regular.otf') format('truetype'); 
+  }
+
+  body {
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
 /* Diseño general de el encriptador */
 .cuerpoDePagina {
     display: flex;
@@ -35,6 +45,7 @@
 #entradaDeTexto {
     flex-basis: 100%;
     font-size: 32px;
+    font-family: 'OpenDyslexic', sans-serif;
     background-color: transparent;
     color: #0A3871;
     border: none;
