@@ -1,6 +1,7 @@
+/* Diseño general de el encriptador */
 .cuerpoDePagina {
-    background-color: #f3f5fc;
     display: flex;
+    background-color: #f3f5fc;
 }
 
 .webLogo {
@@ -9,22 +10,27 @@
     top: 40px;
     width: 31.09px;
     height: 48px;
+    filter: drop-shadow(5px 3px 2px #808080);
 }
 
+/* Input de entrada de texto */
 .seccionDeEntrada,
 .seccionDeSalida {
     text-align: center;
     margin: 100px 0 50px 50px;
     padding: 30px 20px;
     box-sizing: border-box;
+}
 
-
+.seccionDeEntrada {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
 }
 
 #entradaDeTexto::-webkit-input-placeholder {
     color: #0A3871;
 }
-
 
 #entradaDeTexto {
     flex-basis: 100%;
@@ -35,22 +41,16 @@
     resize: none;
 }
 
-.seccionDeEntrada {
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-}
-
 .botoneraEntrada {
-    text-align: left;
     display: flex;
     flex-direction: column;
+    text-align: left;
+   
 }
 
 .botoneraEntrada p {
     color: #495057;
     font-size: 12px;
-
 }
 
 .importantIcon {
@@ -65,7 +65,7 @@
     height: 67px;
 }
 
-.encrypt_button {
+.botonEncriptar {
     margin-right: 12px;
     background-color: #0A3871;
     color: #FFF;
@@ -74,11 +74,12 @@
     border-radius: 24px;
     width: 300px;
 }
-.encrypt_button:hover{
+
+.botonEncriptar:hover {
     background-color: #072B61;
 }
 
-.decrypt_button {
+.botonDesencriptar {
     margin-right: 12px;
     background-color: white;
     color: #0a3871;
@@ -89,11 +90,12 @@
     border: 1px #0A3871 solid;
 
 }
-.decrypt_button:hover{
+
+.botonDesencriptar:hover {
     background-color: #EFF1FA;
 }
 
-
+/* Salida de texto, sin Input.  */
 .seccionDeSalida {
     margin-top: 40px;
     margin-right: 40px;
@@ -103,47 +105,42 @@
     border-radius: 32px;
 }
 
-.imageInputVacio {
-    width: 100%;
-
-}
-
-.ImagenSalidaDeTexto h2{
+.ImagenSalidaDeTexto h2 {
     font-weight: bold;
     font-size: 24px;
     margin: 10px;
 }
-.ImagenSalidaDeTexto p{
+
+.ImagenSalidaDeTexto p {
     font-size: 16px;
     color: #495057;
 }
-
-footer {
-    text-align: center;
-    padding: 40px;
-    background-color: #f3f5fc;
+.imageInputVacio {
+    width: 100%;
 }
-.salidaDeTextoCaja{
+
+/* Salida de texto con Input */
+.salidaDeTextoCaja {
     width: 100%;
     height: 100%;
-    display: flex;    
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
-.salidaDeTexto{
+
+.salidaDeTexto {
     font-size: 32px;
     color: #495057;
     background-color: transparent;
     border: none;
-    resize: none; 
+    resize: none;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
 }
 
-.botonDeCopiarTexto{
+.botonCopiarTexto {
     margin-right: 12px;
     background-color: white;
     color: #0a3871;
@@ -153,6 +150,13 @@ footer {
     width: 300px;
     border: 1px #0A3871 solid;
 }
-.botonDeCopiarTexto:hover{
+
+.botonCopiarTexto:hover {
     background-color: #EFF1FA;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #f3f5fc;
 }
