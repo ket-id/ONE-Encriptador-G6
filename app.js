@@ -26,14 +26,8 @@ function desencriptarTexto() {
     document.getElementById('salidaDeTexto').value = outputText;
 }
 
+
 function copiarTexto() {
-    var inputTextArea = document.getElementById('salidaDeTexto');
-    inputTextArea.select();
-    try {
-        document.execCommand('copy');
-        console.log('Texto copiado al portapapeles.');
-    } catch (err) {
-        console.error('No se pudo copiar el texto: ', err);
-    }
-    window.getSelection().removeAllRanges();
-}
+    var textoParaCopiar = document.getElementById('salidaDeTexto').value;
+
+    navigator.clipboard.writeText(textoParaCopiar)}

@@ -134,13 +134,13 @@
     border-radius: 32px;
 }
 
-.ImagenSalidaDeTexto h2 {
+.imagenSalidaDeTexto h2 {
     font-weight: bold;
     font-size: 24px;
     margin: 10px;
 }
 
-.ImagenSalidaDeTexto p {
+.imagenSalidaDeTexto p {
     font-size: 16px;
     color: #495057;
 }
