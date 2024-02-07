@@ -1,4 +1,22 @@
-function encriptarTexto() {
+function validarYEncriptar() {
+    let text = document.getElementById("entradaDeTexto").value;
+    if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
+        alert("El texto no puede contener mayúsculas o caracteres con acentos.");
+    } else {
+        encriptarTexto(text);
+    }
+}
+
+function validarYDesencriptar() {
+    let text = document.getElementById("entradaDeTexto").value;
+    if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
+        alert("El texto no puede contener mayúsculas o caracteres con acentos.");
+    } else {
+        desencriptarTexto(text);
+    }
+}
+
+function encriptarTexto(text) {
     var inputText = document.getElementById('entradaDeTexto').value;
     var outputText = inputText.replace(/e/g, 'enter')
     .replace(/i/g, 'imes')
@@ -14,9 +32,7 @@ function encriptarTexto() {
     divParaDesactivar.style.display = 'flex';
 }
 
-
-
-function desencriptarTexto() {
+function desencriptarTexto(text) {
     var inputText = document.getElementById('entradaDeTexto').value;
     var outputText = inputText.replace(/enter/g, 'e')        
         .replace(/imes/g, 'i')
@@ -30,4 +46,7 @@ function desencriptarTexto() {
 function copiarTexto() {
     var textoParaCopiar = document.getElementById('salidaDeTexto').value;
 
-    navigator.clipboard.writeText(textoParaCopiar)}
+    navigator.clipboard.writeText(textoParaCopiar)
+
+    document.getElementById("entradaDeTexto").value = ""
+}
