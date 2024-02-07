@@ -1,15 +1,20 @@
 function validarYEncriptar() {
     let text = document.getElementById("entradaDeTexto").value;
-    if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
+    if (text.trim().length === 0) {
+        alert("Por favor, ingrese texto.");
+    } else if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
         alert("El texto no puede contener mayúsculas o caracteres con acentos.");
     } else {
         encriptarTexto(text);
     }
 }
 
+
 function validarYDesencriptar() {
     let text = document.getElementById("entradaDeTexto").value;
-    if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
+    if (text.trim().length === 0) {
+        alert("Por favor, ingrese texto.");
+    } else if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
         alert("El texto no puede contener mayúsculas o caracteres con acentos.");
     } else {
         desencriptarTexto(text);
@@ -40,6 +45,12 @@ function desencriptarTexto(text) {
         .replace(/ober/g, 'o')
         .replace(/ufat/g, 'u');
     document.getElementById('salidaDeTexto').value = outputText;
+
+    var divParaDesactivar = document.getElementById('salidaDeTextoImagen');
+    divParaDesactivar.style.display = 'none';
+
+    var divParaDesactivar = document.getElementById('salidaDeTextoCaja');
+    divParaDesactivar.style.display = 'flex';
 }
 
 
