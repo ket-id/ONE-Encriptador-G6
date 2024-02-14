@@ -1,67 +1,64 @@
-function validarYEncriptar() {
+function validarTextos() {
     let text = document.getElementById("entradaDeTexto").value;
     if (text.trim().length === 0) {
         alert("Por favor, ingrese texto.");
+        return true;
     } else if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
-        var textoImportate = document.getElementById("textoImportante");
-        textoImportate.style.color = "red";
-        var sombra = document.getElementById("entradaDeTexto");
-        sombra.style.border = "1px solid red";
+        return true;
     } else {
-        encriptarTexto(text);
+        return false;
     }
 }
 
+function ocultarImagen() {
+    const divParaDesactivar = document.getElementById('salidaDeTextoImagen');
+    divParaDesactivar.style.display = 'none';
 
-function validarYDesencriptar() {
-    let text = document.getElementById("entradaDeTexto").value;
-    if (text.trim().length === 0) {
-        alert("Por favor, ingrese texto.");
-    } else if (/[A-ZÁÉÍÓÚÜáéíúó]/.test(text)) {
-        var elemento = document.getElementById("textoImportante");
-        elemento.style.color = "red";
-        var sombra = document.getElementById("entradaDeTexto");
-        sombra.style.border = "1px solid red";
+    const divParaDesactivar1 = document.getElementById('salidaDeTextoCaja');
+    divParaDesactivar1.style.display = 'flex';
+}
+
+function colorRojoParaError() {
+    var textoImportate = document.getElementById("textoImportante");
+    textoImportate.style.color = "red";
+    var sombra = document.getElementById("entradaDeTexto");
+    sombra.style.border = "1px solid red";
+}
+
+function encriptarTexto() {
+    if (validarTextos(true)) {
+        colorRojoParaError();
     } else {
-        desencriptarTexto(text);
+        let inputText = document.getElementById('entradaDeTexto').value;
+        let outputText = inputText.replace(/e/g, 'enter')
+            .replace(/i/g, 'imes')
+            .replace(/a/g, 'ai')
+            .replace(/o/g, 'ober')
+            .replace(/u/g, 'ufat');
+        document.getElementById('salidaDeTexto').value = outputText;
+        ocultarImagen();
     }
 }
 
-function encriptarTexto(text) {
-    var inputText = document.getElementById('entradaDeTexto').value;
-    var outputText = inputText.replace(/e/g, 'enter')
-    .replace(/i/g, 'imes')
-    .replace(/a/g, 'ai')
-    .replace(/o/g, 'ober')
-    .replace(/u/g, 'ufat');
-    document.getElementById('salidaDeTexto').value = outputText;
+function desencriptarTexto() {
 
-    var divParaDesactivar = document.getElementById('salidaDeTextoImagen');
-    divParaDesactivar.style.display = 'none';
-
-    var divParaDesactivar = document.getElementById('salidaDeTextoCaja');
-    divParaDesactivar.style.display = 'flex';
-}
-
-function desencriptarTexto(text) {
-    var inputText = document.getElementById('entradaDeTexto').value;
-    var outputText = inputText.replace(/enter/g, 'e')        
-        .replace(/imes/g, 'i')
-        .replace(/ai/g, 'a')
-        .replace(/ober/g, 'o')
-        .replace(/ufat/g, 'u');
-    document.getElementById('salidaDeTexto').value = outputText;
-
-    var divParaDesactivar = document.getElementById('salidaDeTextoImagen');
-    divParaDesactivar.style.display = 'none';
-
-    var divParaDesactivar = document.getElementById('salidaDeTextoCaja');
-    divParaDesactivar.style.display = 'flex';
+    if (validarTextos(true)) {
+        colorRojoParaError();
+    } else {
+        let inputText = document.getElementById('entradaDeTexto').value;
+        let outputText = inputText.replace(/enter/g, 'e')
+            .replace(/imes/g, 'i')
+            .replace(/ai/g, 'a')
+            .replace(/ober/g, 'o')
+            .replace(/ufat/g, 'u');
+        document.getElementById('salidaDeTexto').value = outputText;
+        ocultarImagen()
+    }
 }
 
 
 function copiarTexto() {
-    var textoParaCopiar = document.getElementById('salidaDeTexto').value;
+    let textoParaCopiar = document.getElementById('salidaDeTexto').value;
 
     navigator.clipboard.writeText(textoParaCopiar)
 
