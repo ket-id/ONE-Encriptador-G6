@@ -47,6 +47,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+    width: 60%;
 }
 
 #entradaDeTexto::-webkit-input-placeholder {
@@ -84,20 +85,21 @@
 }
 
 .cajaDeBotones {
-    text-align: center;
+    display: flex;
+
     margin-top: 24px;
-    width: 680px;
+    width: 100%;
     height: 67px;
 }
 
 .botonEncriptar {
-    margin-right: 12px;
+    margin-right: 18px;
     background-color: #0A3871;
     color: #FFF;
     border: none;
     padding: 24px;
     border-radius: 24px;
-    width: 300px;
+    width: 40%;
     transition: 1s all;
     cursor: pointer;
 }
@@ -115,7 +117,7 @@
     border: none;
     padding: 24px;
     border-radius: 24px;
-    width: 300px;
+    width: 40%;
     border: 1px #0A3871 solid;
     transition: 1s all;
     cursor: pointer;
@@ -181,7 +183,7 @@
     border: none;
     padding: 24px;
     border-radius: 24px;
-    width: 300px;
+    width: 100%;
     border: 1px #0A3871 solid;
     transition: 1s all;
     cursor: pointer;

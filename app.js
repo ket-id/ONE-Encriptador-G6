@@ -41,7 +41,6 @@ function encriptarTexto() {
 }
 
 function desencriptarTexto() {
-
     if (validarTextos(true)) {
         colorRojoParaError();
     } else {
@@ -59,8 +58,6 @@ function desencriptarTexto() {
 
 function copiarTexto() {
     let textoParaCopiar = document.getElementById('salidaDeTexto').value;
-
     navigator.clipboard.writeText(textoParaCopiar)
-
     document.getElementById("entradaDeTexto").value = ""
 }
