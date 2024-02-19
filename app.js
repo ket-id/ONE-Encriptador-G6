@@ -25,6 +25,13 @@ function colorRojoParaError() {
     sombra.style.border = "1px solid red";
 }
 
+function colorVerdeParaCorrecto() {
+    var textoImportate = document.getElementById("textoImportante");
+    textoImportate.style.color = "green";
+    var sombra = document.getElementById("entradaDeTexto");
+    sombra.style.border = "1px solid green";
+}
+
 function encriptarTexto() {
     if (validarTextos(true)) {
         colorRojoParaError();
@@ -37,6 +44,7 @@ function encriptarTexto() {
             .replace(/u/g, 'ufat');
         document.getElementById('salidaDeTexto').value = outputText;
         ocultarImagen();
+        colorVerdeParaCorrecto()
     }
 }
 
@@ -52,6 +60,7 @@ function desencriptarTexto() {
             .replace(/ufat/g, 'u');
         document.getElementById('salidaDeTexto').value = outputText;
         ocultarImagen()
+        colorVerdeParaCorrecto()
     }
 }
 
