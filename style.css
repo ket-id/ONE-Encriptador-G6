@@ -1,15 +1,16 @@
 /* Fuente apta para personas con dislexia */
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('Fonts/OpenDyslexicAlta-Regular.otf') format('truetype'); 
-  }
+    src: url('Fonts/OpenDyslexicAlta-Regular.otf') format('truetype');
+}
 
-  body {
+body {
     font-family: 'OpenDyslexic', sans-serif;
     background-color: #f3f5fc;
-  }
-  /* label */
-  .sr-only {
+}
+
+/* label */
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -18,7 +19,7 @@
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-  }
+}
 
 /* Diseño general de el encriptador */
 .cuerpoDePagina {
@@ -39,7 +40,7 @@
 .seccionDeEntrada,
 .seccionDeSalida {
     text-align: center;
-    margin: 100px 0 50px 50px;
+    margin: 100 0 50px 50px;
     padding: 30px 20px;
     box-sizing: border-box;
 }
@@ -71,7 +72,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-   
+
 }
 
 #textoImportante {
@@ -87,6 +88,7 @@
 
 .cajaDeBotones {
     display: flex;
+    justify-content: space-evenly;
     margin-top: 24px;
     width: 100%;
     height: 67px;
@@ -150,6 +152,7 @@
     font-size: 16px;
     color: #495057;
 }
+
 .imageInputVacio {
     width: 100%;
 }
@@ -202,35 +205,73 @@ footer {
 }
 
 /* Medias Queries */
-
-@media screen and (max-width: 425px) {
-    body {
-      background-color: lightblue;
-    }
-  }
-  
-
-  @media screen and (min-width: 426px) and (max-width: 850px) {
-    .cuerpoDePagina{
+@media screen and (min-width: 426px) and (max-width: 850px) {
+    .cuerpoDePagina {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
     }
-    .webLogo{
+
+    .webLogo {
         height: 0px;
+        left: 15px;
     }
-    .seccionDeEntrada{
+
+    .seccionDeEntrada {
         width: 90%;
         height: 75vh;
-        margin: 104px 0 50px 5%;
+        margin: 75px 0 50px 5%;
     }
-    .seccionDeSalida{
+
+    .seccionDeSalida {
         width: 90%;
         height: 75vh;
         margin: 0 0 50px 5%;
     }
+
     .imageInputVacio {
         width: 35%;
-        
+
     }
-  }
+}
+
+@media screen and (max-width: 425px) {
+    .cuerpoDePagina {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .webLogo {
+        height: 0px;
+        left: 0px;
+    }
+
+    .seccionDeEntrada {
+        width: 90%;
+        height: 75vh;
+        margin: 75px 0 50px 5%;
+    }
+
+    .cajaDeBotones {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .botonEncriptar,
+    .botonDesencriptar {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .seccionDeSalida {
+        width: 90%;
+        height: 75vh;
+        margin: 0 0 50px 5%;
+    }
+    
+    .imageInputVacio {
+        width: 35%;
+    }
+}
+
