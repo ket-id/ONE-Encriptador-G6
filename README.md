@@ -31,7 +31,7 @@ La letra "u" es convertida en "ufat"
 Este proyecto esta Desarrollado por Maximiliano Daniel Giacobini</br>
 - `Linkedin` : https://www.linkedin.com/in/maximiliano-giacobini/
 
-## Insignia porcompletar el Challenge:
+## Insignia por completar el Challenge:
 
 ![Insignia Encriptador de Textos](https://github.com/ket-id/ONE-Encriptador-G6/assets/77559584/859a130b-9fa9-4f03-8871-1ad6b03e80c0)
 
