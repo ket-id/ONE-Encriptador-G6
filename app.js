@@ -54,10 +54,10 @@ function desencriptarTexto() {
     } else {
         let inputText = document.getElementById('entradaDeTexto').value;
         let outputText = inputText.replace(/enter/g, 'e')
-            .replace(/imes/g, 'i')
             .replace(/ai/g, 'a')
             .replace(/ober/g, 'o')
-            .replace(/ufat/g, 'u');
+            .replace(/ufat/g, 'u')
+            .replace(/imes/g, 'i');
         document.getElementById('salidaDeTexto').value = outputText;
         ocultarImagen()
         colorVerdeParaCorrecto()
