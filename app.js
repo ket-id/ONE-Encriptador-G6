@@ -53,8 +53,8 @@ function desencriptarTexto() {
         colorRojoParaError();
     } else {
         let inputText = document.getElementById('entradaDeTexto').value;
-        let outputText = inputText.replace(/enter/g, 'e')
-            .replace(/ai/g, 'a')
+        let outputText = inputText.replace(/ai/g, 'a')
+            .replace(/enter/g, 'e')
             .replace(/ober/g, 'o')
             .replace(/ufat/g, 'u')
             .replace(/imes/g, 'i');
